@@ -13,13 +13,13 @@ dotnet ef database update --project src/Jacob_C.Web/Jacob_C.Web/Jacob_C.Web.cspr
 dotnet run --project src/Jacob_C.Web/Jacob_C.Web/Jacob_C.Web.csproj
 ```
 
-The web app hosts the WebAssembly client and keeps database access on the server. The local PostgreSQL credentials are for development only.
+The web app hosts the WebAssembly frontend and keeps database access on the server. The local PostgreSQL credentials are for development only.
 
 The integration test project is ready to use `Testcontainers.PostgreSql` for PostgreSQL-backed tests.
 
 ## Example API slice
 
-`POST /api/examples` accepts `ExampleRequest` and returns `ExampleResponse`. `GET /api/examples/{id}` reads it back. The route mapping and handlers live in `ExampleEndpoints`.
+`ExampleRequest` and `ExampleResponse` live in `Jacob_C.Web.Contracts`, referenced by both the server and frontend. `POST /api/examples` accepts `ExampleRequest` and returns `ExampleResponse`. `GET /api/examples/{id}` reads it back. The route mapping and handlers live in `ExampleEndpoints`.
 
 Example request body:
 

@@ -33,6 +33,6 @@ app.MapExampleEndpoints();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
-    .AddAdditionalAssemblies(typeof(Jacob_C.Web.Client._Imports).Assembly);
+    .AddAdditionalAssemblies(typeof(Jacob_C.Web.Frontend._Imports).Assembly);
 
 app.Run();
