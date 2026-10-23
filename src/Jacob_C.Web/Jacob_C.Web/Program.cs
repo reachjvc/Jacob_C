@@ -1,5 +1,6 @@
 using Jacob_C.Web.Components;
 using Jacob_C.Web.Data;
+using Jacob_C.Web.Features.Examples;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -28,6 +29,7 @@ app.UseHttpsRedirection();
 
 app.UseAntiforgery();
 
+app.MapExampleEndpoints();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
