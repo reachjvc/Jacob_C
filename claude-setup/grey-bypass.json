@@ -1,0 +1,7 @@
+{
+  "name": "Dark (grey bypass)",
+  "base": "dark",
+  "overrides": {
+    "error": "rgb(140,140,140)"
+  }
+}

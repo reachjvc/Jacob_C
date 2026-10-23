@@ -9,6 +9,7 @@ Requires **Node.js** on PATH (the status line and hooks are Node scripts).
 |---|---|
 | `claude-setup/statusline.js` | Status line: `WORKING/IDLING \| model (effort) \| dir \| ⎇ branch \| ctx % \| 5h/7d rate limits` |
 | `claude-setup/dot-state.js` | Hook helper that records whether a session is working or idle (drives the red/green WORKING/IDLING label) |
+| `claude-setup/grey-bypass.json` | Custom theme (dark base) that makes the "bypass permissions on" footer grey |
 | `claude-setup/user-settings-snippet.json` | Settings to merge into the user's global `~/.claude/settings.json` |
 | `.claude/settings.json` | Project settings: full tool permissions + bypass mode in this repo (works automatically, nothing to install) |
 
@@ -18,6 +19,7 @@ Requires **Node.js** on PATH (the status line and hooks are Node scripts).
    Both files must sit together in that folder, because `statusline.js` reads the `dot-state/` folder next to itself.
    ```bash
    cp claude-setup/statusline.js claude-setup/dot-state.js ~/.claude/
+   mkdir -p ~/.claude/themes && cp claude-setup/grey-bypass.json ~/.claude/themes/
    ```
 
 2. **Merge** `claude-setup/user-settings-snippet.json` into `~/.claude/settings.json`.
@@ -29,6 +31,7 @@ Requires **Node.js** on PATH (the status line and hooks are Node scripts).
 
 ## What the settings do
 
+- `theme: "custom:grey-bypass"`: uses `~/.claude/themes/grey-bypass.json`. Claude Code draws the bypass indicator in the theme's `error` color, so this theme makes `error` grey. Side effect: error text is grey too.
 - `statusLine`: runs `statusline.js` every 2 seconds.
 - `hooks`: call `dot-state.js working` on prompt submit/tool use and `dot-state.js idle` on stop, so the status line shows WORKING (red) or IDLING (green).
 - `permissions.defaultMode: "bypassPermissions"`: Claude runs every tool without asking (globally).

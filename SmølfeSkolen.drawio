@@ -1,9 +1,201 @@
 <mxfile host="Electron">
   <diagram name="Side-1" id="14wDEZ3bSfnARJLPPD_4">
-    <mxGraphModel dx="678" dy="593" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="1704" dy="2182" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Users&lt;/b&gt;&lt;/div&gt;&lt;div&gt;- id (PK)&lt;/div&gt;&lt;div&gt;- navn&lt;/div&gt;&lt;div&gt;- AccessLevelId (FK -&amp;gt; AccessLevel)&lt;/div&gt;&lt;div&gt;- country&lt;/div&gt;&lt;div&gt;- xpLevel&lt;/div&gt;&lt;div&gt;- completedOnboardingTracking (Yes | No)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="332.24" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Domæne" vertex="1">
+          <mxGeometry height="30" width="60" x="50" y="-50" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;AccessLevel&lt;/b&gt;&lt;/div&gt;&lt;div&gt;- id (PK)&lt;/div&gt;&lt;div&gt;- Name&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="652.24" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;AccessLevel&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="1210" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="FK eksempler" vertex="1">
+          <mxGeometry height="30" width="170" x="1220" y="-70" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="id&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="40" x="1210" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="Name&lt;div&gt;Free&lt;/div&gt;&lt;div&gt;Basic&lt;/div&gt;&lt;div&gt;Premium&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1260" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Users&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="100" x="1420" y="-20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="id&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="40" x="1420" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;color: rgb(0, 0, 0);&quot;&gt;Name&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Jacob&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Alex&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Jonas&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1470" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;AccessLevelId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;3&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1560" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="JVkFsk4QUBLpe0KkooiC-14" edge="1" parent="1" source="JVkFsk4QUBLpe0KkooiC-1" style="endArrow=ERone;html=1;rounded=0;exitX=1.011;exitY=0.096;exitDx=0;exitDy=0;exitPerimeter=0;startArrow=ERoneToMany;startFill=0;entryX=-0.002;entryY=0.096;entryDx=0;entryDy=0;entryPerimeter=0;endFill=0;" target="JVkFsk4QUBLpe0KkooiC-4" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="12.240000000000009" y="-80" as="sourcePoint" />
+            <mxPoint x="112.24000000000001" y="-30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GET /prices&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2020" y="-15" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-3" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="API endpoints" vertex="1">
+          <mxGeometry height="30" width="60" x="2030" y="-105" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;offentligt&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2180" y="-15" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-6" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Kræver login&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2180" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GET /sessions&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2020" y="25" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;POST /sessions&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2020" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Kræver login&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="130" x="2180" y="65" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Tjek lige at det er sådan her" vertex="1">
+          <mxGeometry height="30" width="200" x="2145" y="-75" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;TimeEntry&lt;/b&gt;&lt;/div&gt;&lt;div&gt;- id (PK)&lt;/div&gt;&lt;div&gt;- UserId (FK -&amp;gt; Users)&lt;/div&gt;&lt;div&gt;- DateStart&lt;/div&gt;&lt;div&gt;- DateEnd&lt;/div&gt;&lt;div&gt;- Navn&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="150" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-13" edge="1" parent="1" style="endArrow=ERoneToMany;html=1;rounded=0;startArrow=ERone;startFill=0;endFill=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="300" y="30" as="sourcePoint" />
+            <mxPoint x="130" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-18" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;UserId&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="40" x="1250" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-20" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Id&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1023&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;3&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1350" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-21" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;DateStart&lt;/div&gt;&lt;div&gt;420&lt;/div&gt;&lt;div&gt;420&lt;/div&gt;&lt;div&gt;46132&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1450" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-22" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;DateEnd&lt;/div&gt;&lt;div&gt;420&lt;/div&gt;&lt;div&gt;421&lt;/div&gt;&lt;div&gt;46133&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="80" x="1540" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-23" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Navn&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Smoke&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Lidt Mere Smoke&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Overraskende nok, Smoke&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="60" width="200" x="1640" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-25" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;TimeEntry&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="580" x="1250" y="125" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-26" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;Area (livsområde, helbred, dating)&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- UserId (FK -&amp;gt; Users)&lt;/div&gt;&lt;div&gt;- Navn&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="620" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-27" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;Goal&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- Navn&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- TargetDate&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="950" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-28" edge="1" parent="1" source="TUY6XDB20jGGNL42J6Xc-26" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;exitX=-0.008;exitY=0.167;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="600" y="350" as="sourcePoint" />
+            <mxPoint x="320" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-31" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="navne ikke nødvendige at have med ift. normalisering (ikke tjekket om jeg bruger ordet rigtigt)" vertex="1">
+          <mxGeometry height="30" width="330" x="1390" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-32" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;Northstar&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- id (PK)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- UserId (FK -&amp;gt; Users)&lt;/div&gt;&lt;div&gt;- Navn&lt;/div&gt;&lt;div&gt;- DateStart&lt;/div&gt;&lt;div&gt;- DateEnd&lt;/div&gt;" vertex="1">
+          <mxGeometry height="110" width="280" x="620" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-33" edge="1" parent="1" source="TUY6XDB20jGGNL42J6Xc-32" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;exitX=0;exitY=0.12;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="620" y="638.25" as="sourcePoint" />
+            <mxPoint x="310" y="30" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-34" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;SeasonFocus&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;- &lt;/b&gt;id (PK)&lt;b&gt;&amp;nbsp;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;- DateStart&lt;/div&gt;&lt;div&gt;- DateEnd&lt;/div&gt;&lt;div&gt;- GoalId&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="210" y="610" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-36" edge="1" parent="1" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;entryX=-0.012;entryY=0.119;entryDx=0;entryDy=0;entryPerimeter=0;" target="TUY6XDB20jGGNL42J6Xc-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="500" y="630" as="sourcePoint" />
+            <mxPoint x="450" y="971" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-37" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;rounded=0;" value="Ting i users som ikke bruges her:&lt;div&gt;&amp;nbsp;Country (gemmer deres land),&amp;nbsp;&lt;/div&gt;&lt;div&gt;xpLevel (i takt med at de laver mere af onboarding/scenarier får de XP)&lt;div&gt;CompletedOnboarding (om de har lavet onboarding)&lt;/div&gt;&lt;/div&gt;&lt;div&gt;navn bruges vel heller ikke, samt datestart/end bruge ikke aktivt ?&amp;nbsp;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="660" x="250" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-38" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;GoalsFeeds&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- GoalId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;- FeedsGoalId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="280" x="920" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-40" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Goal&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="155" x="1250" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-41" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GoalFeeds&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="1450" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-42" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;GoalId&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="40" x="1250" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-43" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Navn&lt;/span&gt;&lt;/div&gt;&lt;div&gt;approach 25&lt;/div&gt;&lt;div&gt;Få en kæreste&lt;/div&gt;&lt;div&gt;løb 5 km&lt;/div&gt;&lt;div&gt;stop weed&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="110" x="1300" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-44" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;GoalId&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;1&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;3&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;4&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;4&lt;/span&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="40" x="1450" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-45" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;FeedsGoalId&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;2&lt;/span&gt;&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="155" x="1502.5" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-46" edge="1" parent="1" source="TUY6XDB20jGGNL42J6Xc-38" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;entryX=0.013;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.001;exitY=0.137;exitDx=0;exitDy=0;exitPerimeter=0;" target="TUY6XDB20jGGNL42J6Xc-27" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="560" y="880" as="sourcePoint" />
+            <mxPoint x="1007" y="590" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-47" edge="1" parent="1" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;entryX=0.013;entryY=0.1;entryDx=0;entryDy=0;entryPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="916" y="650" as="sourcePoint" />
+            <mxPoint x="950" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-48" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GoalServesArea&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;-&lt;/b&gt;GoalID (FK goal)&lt;/div&gt;&lt;div&gt;-AreaId (FK area)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="280" x="612.24" y="750" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-49" edge="1" parent="1" source="TUY6XDB20jGGNL42J6Xc-48" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;exitX=-0.006;exitY=0.127;exitDx=0;exitDy=0;exitPerimeter=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="530" y="920" as="sourcePoint" />
+            <mxPoint x="930" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-50" edge="1" parent="1" style="endArrow=ERone;html=1;rounded=0;startArrow=ERoneToMany;startFill=0;endFill=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="590" y="760" as="sourcePoint" />
+            <mxPoint x="610" y="330" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-52" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GoalServesArea&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="1685" y="245" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-53" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;GoalID&lt;/b&gt;&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="60" x="1685" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-55" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;AreaId&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="45" x="1750" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-56" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;Navn&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Helbred&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Bussiness&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;Dating&lt;/span&gt;&lt;/div&gt;&lt;div&gt;Glæde&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="80" x="1960" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-57" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(#000000, var(--ge-light-color, #ffffff));&quot;&gt;&lt;b&gt;AreaId&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;&lt;div&gt;4&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="90" width="45" x="1910" y="280" as="geometry" />
+        </mxCell>
+        <mxCell id="TUY6XDB20jGGNL42J6Xc-58" parent="1" style="rounded=0;whiteSpace=wrap;html=1;shadow=0;align=left;" value="&lt;div&gt;&lt;b&gt;Area&lt;/b&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="30" width="110" x="1910" y="240" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
