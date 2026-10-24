@@ -1,11 +1,84 @@
-**/bin/
-**/obj/
-**/node_modules/
-src/Jacob_C.Frontend/wwwroot/css/tailwind.css
-.vs/
-TestResults/
+# .NET build output
+**/[Bb]in/
+**/[Oo]bj/
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+[Oo]ut/
+[Ll]og/
+[Ll]ogs/
 artifacts/
-*.user
+.artifacts/
+**/publish/
+*.binlog
+*.log
+*.tmp
+*.cache
+MSBuild_Logs/
+project.lock.json
+project.fragment.lock.json
+
+# Test output
+**/TestResults/
+*.trx
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+
+# Visual Studio and IDE files
+.vs/
+.idea/
+.history/
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+*.code-workspace
+*.rsuser
 *.suo
+*.user
+*.userosscache
 *.sln.docstates
+*.userprefs
+*.DotSettings.user
+
+# Node and npm
+**/node_modules/
+**/.npm/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.tsbuildinfo
+
+# Generated Tailwind output
+src/Jacob_C.Frontend/wwwroot/css/tailwind.css
+
+# Local environment and signing files
 .env
+.env.*
+!.env.example
+*.pfx
+*.publishsettings
+*.pubxml.user
+
+# Packages and publish profiles
+*.nupkg
+*.snupkg
+*.pubxml
+*.publishproj
+
+# Operating system and editor backups
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100/
+.Trashes/
+Thumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*~
