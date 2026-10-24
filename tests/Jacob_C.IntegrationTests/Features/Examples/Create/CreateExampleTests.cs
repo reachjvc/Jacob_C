@@ -1,7 +1,7 @@
 using System.Net;
 using System.Net.Http.Json;
-using Jacob_C.IntegrationTests.Infrastructure;
 using Jacob_C.Shared.Features.Examples;
+using Jacob_C.Testing.Infrastructure;
 
 namespace Jacob_C.IntegrationTests.Features.Examples.Create;
 

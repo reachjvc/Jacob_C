@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.Configuration;
 
-namespace Jacob_C.IntegrationTests.Infrastructure;
+namespace Jacob_C.Testing.Infrastructure;
 
 internal sealed class ExampleApiFactory : WebApplicationFactory<Program>
 {

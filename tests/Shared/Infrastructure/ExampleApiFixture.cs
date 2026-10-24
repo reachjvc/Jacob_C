@@ -5,7 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Respawn;
 using Testcontainers.PostgreSql;
 
-namespace Jacob_C.IntegrationTests.Infrastructure;
+namespace Jacob_C.Testing.Infrastructure;
 
 public sealed class ExampleApiFixture : IAsyncLifetime
 {
