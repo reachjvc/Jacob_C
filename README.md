@@ -30,11 +30,31 @@ The integration test project is ready to use `Testcontainers.PostgreSql` for Pos
 
 ## Example vertical slice
 
-The solution has three projects: `Jacob_C.Web` hosts the API and serves the WebAssembly frontend, `Jacob_C.Frontend` contains the client UI, and `Jacob_C.Shared` contains DTOs referenced by both. Each project keeps the example code under `Features/Examples`:
+The solution has three projects: `Jacob_C.Web` hosts the API and serves the WebAssembly frontend, `Jacob_C.Frontend` contains the client UI, and `Jacob_C.Shared` contains DTOs referenced by both. The example uses the same child slices in the API and UI:
 
-- `Web/Features/Examples`: domain, API endpoints, EF Core context, and migrations.
-- `Frontend/Features/Examples`: the browser page that creates, lists, updates, and deletes examples through the API.
-- `Shared/Features/Examples`: `ExampleRequest` and `ExampleResponse` DTOs.
+```text
+Web/Features/Examples/
+├── Create/CreateExample.cs
+├── Read/ReadExamples.cs
+├── Update/UpdateExample.cs
+├── Delete/DeleteExample.cs
+├── ExampleDomain.cs
+├── ExampleDbContext.cs
+└── Migrations/
+
+Frontend/Features/Examples/
+├── Create/CreateExampleForm.razor
+├── Read/ReadExamplesList.razor
+├── Update/UpdateExampleForm.razor
+├── Delete/DeleteExampleButton.razor
+└── ExamplesPage.razor
+
+Shared/Features/Examples/
+├── ExampleRequest.cs
+└── ExampleResponse.cs
+```
+
+Each API endpoint and UI component lives in its operation slice. The Web parent keeps shared domain and storage; the Frontend parent composes the page; DTOs stay in Shared.
 
 The API supports `GET /api/examples`, `GET /api/examples/{id}`, `POST /api/examples`, `PUT /api/examples/{id}`, and `DELETE /api/examples/{id}`. `ExampleRequest` carries a name and email. `ExampleResponse` also carries the ID.
 
