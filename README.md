@@ -26,7 +26,11 @@ dotnet ef migrations add MigrationName --project src/Jacob_C.Web/Jacob_C.Web.csp
 
 The web app hosts the WebAssembly frontend and keeps database access on the server. The local PostgreSQL credentials are for development only.
 
-The integration test project is ready to use `Testcontainers.PostgreSql` for PostgreSQL-backed tests.
+The integration test project uses `Testcontainers.PostgreSql` for PostgreSQL-backed tests.
+
+## Tests
+
+Run all tests with `dotnet test Jacob_C.slnx`. Unit tests run without Docker. Integration tests start PostgreSQL with Testcontainers, host the API with `WebApplicationFactory`, and clear test data with Respawn.
 
 ## Example vertical slice
 

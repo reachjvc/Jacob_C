@@ -17,7 +17,7 @@ public static class CreateExample
         ExampleDbContext dbContext,
         CancellationToken cancellationToken)
     {
-        var errors = Validate(request);
+        var errors = ValidateRequest(request);
         if (errors is not null)
         {
             return TypedResults.ValidationProblem(errors);
@@ -37,7 +37,7 @@ public static class CreateExample
         return TypedResults.Created($"/api/examples/{example.Id}", response);
     }
 
-    private static Dictionary<string, string[]>? Validate(ExampleRequest request)
+    public static Dictionary<string, string[]>? ValidateRequest(ExampleRequest request)
     {
         var errors = new Dictionary<string, string[]>();
         if (string.IsNullOrWhiteSpace(request.Name))

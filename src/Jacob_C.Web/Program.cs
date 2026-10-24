@@ -35,3 +35,5 @@ app.MapRazorComponents<App>()
     .AddAdditionalAssemblies(typeof(Jacob_C.Frontend._Imports).Assembly);
 
 app.Run();
+
+public partial class Program { }
