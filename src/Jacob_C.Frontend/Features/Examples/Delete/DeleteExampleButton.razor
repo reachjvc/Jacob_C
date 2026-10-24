@@ -1,0 +1,49 @@
+@inject HttpClient Http
+
+<button class="rounded-md bg-red-700 px-3 py-1.5 text-sm font-medium text-white hover:bg-red-800 disabled:opacity-50" type="button" @onclick="DeleteAsync" disabled="@IsBusy">
+    Delete
+</button>
+
+@if (ErrorMessage is not null)
+{
+    <p class="text-sm text-red-800" role="alert">@ErrorMessage</p>
+}
+
+@code {
+    [Parameter, EditorRequired] public ExampleResponse Example { get; set; } = default!;
+    [Parameter] public EventCallback OnDeleted { get; set; }
+
+    private string? ErrorMessage { get; set; }
+    private bool IsBusy { get; set; }
+
+    private async Task DeleteAsync()
+    {
+        if (IsBusy)
+        {
+            return;
+        }
+
+        IsBusy = true;
+        ErrorMessage = null;
+
+        try
+        {
+            using var response = await Http.DeleteAsync($"api/examples/{Example.Id}");
+            if (!response.IsSuccessStatusCode)
+            {
+                ErrorMessage = $"The API returned status code {(int)response.StatusCode}.";
+                return;
+            }
+
+            await OnDeleted.InvokeAsync();
+        }
+        catch (HttpRequestException)
+        {
+            ErrorMessage = "Could not delete the example.";
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+}

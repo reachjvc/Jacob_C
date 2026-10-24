@@ -1,0 +1,11 @@
+<Solution>
+  <Folder Name="/src/" />
+  <Project Path="src/Jacob_C.Web/Jacob_C.Web.csproj" />
+  <Project Path="src/Jacob_C.Frontend/Jacob_C.Frontend.csproj" />
+  <Project Path="src/Jacob_C.Shared/Jacob_C.Shared.csproj" />
+  <Folder Name="/tests/">
+    <Project Path="tests/Jacob_C.IntegrationTests/Jacob_C.IntegrationTests.csproj" />
+    <Project Path="tests/Shared/Jacob_C.Testing.csproj" />
+    <Project Path="tests/Jacob_C.UnitTests/Jacob_C.UnitTests.csproj" />
+  </Folder>
+</Solution>
