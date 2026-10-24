@@ -4,14 +4,19 @@ Learning project using Blazor WebAssembly, ASP.NET Core, Entity Framework Core, 
 
 ## Run
 
-Start PostgreSQL with `docker compose up -d`, then run the web app with:
+Install Node.js and npm for Tailwind CSS. Start PostgreSQL with `docker compose up -d`, then run the web app with:
 
 ```powershell
+Push-Location src/Jacob_C.Frontend
+npm ci
+Pop-Location
 dotnet tool restore
 $env:ASPNETCORE_ENVIRONMENT = "Development"
 dotnet ef database update --project src/Jacob_C.Web/Jacob_C.Web.csproj
 dotnet run --project src/Jacob_C.Web/Jacob_C.Web.csproj
 ```
+
+The Frontend project builds Tailwind CSS as part of its .NET build. Run `npm run css:watch` from `src/Jacob_C.Frontend` while editing styles.
 
 Add future database migrations to the example slice with:
 
@@ -28,15 +33,16 @@ The integration test project is ready to use `Testcontainers.PostgreSql` for Pos
 The solution has three projects: `Jacob_C.Web` hosts the API and serves the WebAssembly frontend, `Jacob_C.Frontend` contains the client UI, and `Jacob_C.Shared` contains DTOs referenced by both. Each project keeps the example code under `Features/Examples`:
 
 - `Web/Features/Examples`: domain, API endpoints, EF Core context, and migrations.
-- `Frontend/Features/Examples`: the browser page that creates and reads examples through the API.
+- `Frontend/Features/Examples`: the browser page that creates, lists, updates, and deletes examples through the API.
 - `Shared/Features/Examples`: `ExampleRequest` and `ExampleResponse` DTOs.
 
-`POST /api/examples` accepts `ExampleRequest` and returns `ExampleResponse`. `GET /api/examples/{id}` reads it back.
+The API supports `GET /api/examples`, `GET /api/examples/{id}`, `POST /api/examples`, `PUT /api/examples/{id}`, and `DELETE /api/examples/{id}`. `ExampleRequest` carries a name and email. `ExampleResponse` also carries the ID.
 
 Example request body:
 
 ```json
 {
-  "name": "First example"
+  "name": "First example",
+  "email": "first@example.com"
 }
 ```

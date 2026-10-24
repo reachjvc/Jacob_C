@@ -11,9 +11,8 @@ public sealed class ExampleDbContext(DbContextOptions<ExampleDbContext> options)
         modelBuilder.Entity<ExampleDomain>(example =>
         {
             example.HasKey(item => item.Id);
-            example.Property(item => item.Name)
-                .HasMaxLength(ExampleDomain.MaxNameLength)
-                .IsRequired();
+            example.Property(item => item.Name).IsRequired();
+            example.Property(item => item.Email).IsRequired();
         });
     }
 }

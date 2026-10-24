@@ -1,5 +1,7 @@
 **/bin/
 **/obj/
+**/node_modules/
+src/Jacob_C.Frontend/wwwroot/css/tailwind.css
 .vs/
 TestResults/
 artifacts/

@@ -14,4 +14,8 @@
     <ProjectReference Include="..\Jacob_C.Shared\Jacob_C.Shared.csproj" />
   </ItemGroup>
 
+  <Target Name="BuildTailwind" BeforeTargets="PrepareForBuild" Condition="'$(DesignTimeBuild)' != 'true'">
+    <Exec WorkingDirectory="$(MSBuildProjectDirectory)" Command="npm run css:build" />
+  </Target>
+
 </Project>
