@@ -1,5 +1,4 @@
 using Jacob_C.Web.Components;
-using Jacob_C.Web.Data;
 using Jacob_C.Web.Features.Examples;
 using Microsoft.EntityFrameworkCore;
 
@@ -8,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
-builder.Services.AddDbContext<AppDbContext>(options =>
+builder.Services.AddDbContext<ExampleDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();

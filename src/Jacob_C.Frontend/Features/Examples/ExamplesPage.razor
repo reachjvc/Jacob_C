@@ -1,0 +1,125 @@
+@page "/"
+@rendermode @(new InteractiveWebAssemblyRenderMode(prerender: false))
+@inject HttpClient Http
+
+<PageTitle>Example slice</PageTitle>
+
+<main class="examples-page">
+    <header class="page-heading">
+        <p class="eyebrow">JACOB_C <span>•</span> LEARNING REPO</p>
+        <h1>Try the example slice</h1>
+        <p class="intro">Create a record through the API, then read it back from PostgreSQL.</p>
+    </header>
+
+    <section class="panel" aria-labelledby="create-heading">
+        <div class="section-heading">
+            <span class="step-number">01</span>
+            <div>
+                <h2 id="create-heading">Create an example</h2>
+                <p>Your name travels as a shared request DTO.</p>
+            </div>
+        </div>
+
+        <form class="create-form" @onsubmit="CreateExampleAsync" @onsubmit:preventDefault>
+            <label for="example-name">Name</label>
+            <div class="input-row">
+                <input id="example-name" @bind="Name" maxlength="100" required placeholder="e.g. First example" />
+                <button type="submit" disabled="@IsBusy">@(IsBusy ? "Saving…" : "Save example")</button>
+            </div>
+            <p class="hint">Up to 100 characters. The server validates the value too.</p>
+        </form>
+    </section>
+
+    @if (ErrorMessage is not null)
+    {
+        <p class="feedback error" role="alert">@ErrorMessage</p>
+    }
+
+    @if (Example is not null)
+    {
+        <section class="panel result-panel" aria-labelledby="result-heading">
+            <div class="section-heading">
+                <span class="step-number">02</span>
+                <div>
+                    <h2 id="result-heading">Saved in PostgreSQL</h2>
+                    <p>The API returned this shared response DTO.</p>
+                </div>
+            </div>
+
+            <div class="result-row">
+                <div>
+                    <p class="result-name">@Example.Name</p>
+                    <p class="result-id">@Example.Id</p>
+                </div>
+                <button class="secondary-button" type="button" @onclick="ReadExampleAsync" disabled="@IsBusy">
+                    Read it back
+                </button>
+            </div>
+        </section>
+    }
+</main>
+
+@code {
+    private string Name { get; set; } = string.Empty;
+    private ExampleResponse? Example { get; set; }
+    private string? ErrorMessage { get; set; }
+    private bool IsBusy { get; set; }
+
+    private async Task CreateExampleAsync()
+    {
+        if (IsBusy)
+        {
+            return;
+        }
+
+        IsBusy = true;
+        ErrorMessage = null;
+
+        try
+        {
+            using var response = await Http.PostAsJsonAsync("api/examples", new ExampleRequest(Name));
+            if (!response.IsSuccessStatusCode)
+            {
+                ErrorMessage = response.StatusCode == System.Net.HttpStatusCode.BadRequest
+                    ? "Enter a name of 1 to 100 characters."
+                    : $"The API returned status code {(int)response.StatusCode}.";
+                return;
+            }
+
+            Example = await response.Content.ReadFromJsonAsync<ExampleResponse>();
+            Name = string.Empty;
+        }
+        catch (HttpRequestException)
+        {
+            ErrorMessage = "Could not reach the API. Check that the web app and PostgreSQL are running.";
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+
+    private async Task ReadExampleAsync()
+    {
+        if (Example is null || IsBusy)
+        {
+            return;
+        }
+
+        IsBusy = true;
+        ErrorMessage = null;
+
+        try
+        {
+            Example = await Http.GetFromJsonAsync<ExampleResponse>($"api/examples/{Example.Id}");
+        }
+        catch (HttpRequestException)
+        {
+            ErrorMessage = "Could not read the example from the API.";
+        }
+        finally
+        {
+            IsBusy = false;
+        }
+    }
+}

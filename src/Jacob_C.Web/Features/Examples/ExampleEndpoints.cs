@@ -1,5 +1,4 @@
-using Jacob_C.Web.Data;
-using Jacob_C.Shared.Examples;
+using Jacob_C.Shared.Features.Examples;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;
@@ -19,7 +18,7 @@ public static class ExampleEndpoints
 
     private static async Task<IResult> Create(
         ExampleRequest request,
-        AppDbContext dbContext,
+        ExampleDbContext dbContext,
         CancellationToken cancellationToken)
     {
         var example = ExampleDomain.Create(request.Name);
@@ -39,7 +38,7 @@ public static class ExampleEndpoints
 
     private static async Task<IResult> GetById(
         Guid id,
-        AppDbContext dbContext,
+        ExampleDbContext dbContext,
         CancellationToken cancellationToken)
     {
         var example = await dbContext.Examples

@@ -1,9 +1,8 @@
 using Microsoft.EntityFrameworkCore;
-using Jacob_C.Web.Features.Examples;
 
-namespace Jacob_C.Web.Data;
+namespace Jacob_C.Web.Features.Examples;
 
-public sealed class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(options)
+public sealed class ExampleDbContext(DbContextOptions<ExampleDbContext> options) : DbContext(options)
 {
     public DbSet<ExampleDomain> Examples => Set<ExampleDomain>();
 
