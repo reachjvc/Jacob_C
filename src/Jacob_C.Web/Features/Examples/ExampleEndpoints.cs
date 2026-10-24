@@ -1,5 +1,5 @@
 using Jacob_C.Web.Data;
-using Jacob_C.Web.Contracts.Examples;
+using Jacob_C.Shared.Examples;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Routing;
 using Microsoft.EntityFrameworkCore;

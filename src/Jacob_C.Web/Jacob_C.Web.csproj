@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
     <BlazorDisableThrowNavigationException>true</BlazorDisableThrowNavigationException>
+    <DefaultItemExcludesInProjectFolder>**/bin/**;**/obj/**</DefaultItemExcludesInProjectFolder>
   </PropertyGroup>
 
   <ItemGroup>
@@ -14,8 +15,8 @@
       <PrivateAssets>all</PrivateAssets>
     </PackageReference>
     <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="10.0.3" />
-    <ProjectReference Include="..\Jacob_C.Web.Frontend\Jacob_C.Web.Frontend.csproj" />
-    <ProjectReference Include="..\..\Jacob_C.Web.Contracts\Jacob_C.Web.Contracts.csproj" />
+    <ProjectReference Include="..\Jacob_C.Frontend\Jacob_C.Frontend.csproj" />
+    <ProjectReference Include="..\Jacob_C.Shared\Jacob_C.Shared.csproj" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly.Server" Version="10.0.13" />
   </ItemGroup>
 

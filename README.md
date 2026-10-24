@@ -9,8 +9,8 @@ Start PostgreSQL with `docker compose up -d`, then run the web app with:
 ```powershell
 dotnet tool restore
 $env:ASPNETCORE_ENVIRONMENT = "Development"
-dotnet ef database update --project src/Jacob_C.Web/Jacob_C.Web/Jacob_C.Web.csproj
-dotnet run --project src/Jacob_C.Web/Jacob_C.Web/Jacob_C.Web.csproj
+dotnet ef database update --project src/Jacob_C.Web/Jacob_C.Web.csproj
+dotnet run --project src/Jacob_C.Web/Jacob_C.Web.csproj
 ```
 
 The web app hosts the WebAssembly frontend and keeps database access on the server. The local PostgreSQL credentials are for development only.
@@ -19,7 +19,7 @@ The integration test project is ready to use `Testcontainers.PostgreSql` for Pos
 
 ## Example API slice
 
-`ExampleRequest` and `ExampleResponse` live in `Jacob_C.Web.Contracts`, referenced by both the server and frontend. `POST /api/examples` accepts `ExampleRequest` and returns `ExampleResponse`. `GET /api/examples/{id}` reads it back. The route mapping and handlers live in `ExampleEndpoints`.
+The solution has three projects: `Jacob_C.Web` hosts the API and serves the WebAssembly frontend, `Jacob_C.Frontend` contains the client UI, and `Jacob_C.Shared` contains DTOs referenced by both. `POST /api/examples` accepts `ExampleRequest` and returns `ExampleResponse`. `GET /api/examples/{id}` reads it back. The route mapping and handlers live in `ExampleEndpoints`.
 
 Example request body:
 
