@@ -1,4 +1,5 @@
 using Jacob_C.Web.Features.Examples;
+using Jacob_C.Web.Features.Hus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.Extensions.DependencyInjection;

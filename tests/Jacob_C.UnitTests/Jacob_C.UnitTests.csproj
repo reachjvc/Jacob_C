@@ -23,4 +23,8 @@
     <ProjectReference Include="..\..\src\Jacob_C.Web\Jacob_C.Web.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Examples\Create\" />
+  </ItemGroup>
+
 </Project>

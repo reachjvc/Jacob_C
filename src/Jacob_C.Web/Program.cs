@@ -1,5 +1,8 @@
 using Jacob_C.Web.Components;
-using Jacob_C.Web.Features.Examples;
+using Jacob_C.Shared.Features.Hus.Create;
+using Jacob_C.Web.Features.Hus;
+using Jacob_C.Web.Features.Hus.Create;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -11,6 +14,20 @@ builder.Services.AddDbContext<ExampleDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
+
+// TEMP: sanity check CreateHus by creating 10 houses on startup
+using (var scope = app.Services.CreateScope())
+{
+    var dbContext = scope.ServiceProvider.GetRequiredService<ExampleDbContext>();
+    for (var i = 1; i <= 10; i++)
+    {
+        var request = new CreateHusRequest($"Hus {i}", 50 + i * 10, i % 3 == 0 ? null : i);
+        var result = await CreateHus.Handle(request, dbContext, CancellationToken.None);
+        Console.WriteLine(result is Created<CreateHusResponse> created
+            ? $"Created: {created.Value}"
+            : $"Failed: {result}");
+    }
+}
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
@@ -36,4 +53,7 @@ app.MapRazorComponents<App>()
 
 app.Run();
 
-public partial class Program { }
+namespace Jacob_C.Web
+{
+    public partial class Program { }
+}

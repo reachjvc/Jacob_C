@@ -6,4 +6,11 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Folder Include="Features\Hus\Delete\" />
+    <Folder Include="Features\Hus\Migrations\" />
+    <Folder Include="Features\Hus\Read\" />
+    <Folder Include="Features\Hus\Update\" />
+  </ItemGroup>
+
 </Project>
