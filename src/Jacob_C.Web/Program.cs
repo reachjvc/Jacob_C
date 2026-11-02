@@ -45,7 +45,7 @@ app.UseHttpsRedirection();
 
 app.UseAntiforgery();
 
-app.MapExampleEndpoints();
+app.MapHusEndpoints();
 app.MapStaticAssets();
 app.MapRazorComponents<App>()
     .AddInteractiveWebAssemblyRenderMode()
