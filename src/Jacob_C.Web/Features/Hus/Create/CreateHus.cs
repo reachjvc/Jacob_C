@@ -33,7 +33,7 @@ public static class CreateHus
         await dbContext.SaveChangesAsync(cancellationToken);
 
         var response = new CreateHusResponse(hus.Id, hus.Name, hus.Kvm, hus.Damer);
-        return TypedResults.Created($"/api/examples/{hus.Id}", response);
+        return TypedResults.Created($"/api/hus/{hus.Id}", response);
     }
 
     public static Dictionary<string, string[]>? ValidateRequest(CreateHusRequest request)

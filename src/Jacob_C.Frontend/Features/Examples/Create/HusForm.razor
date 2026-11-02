@@ -14,7 +14,7 @@
             <input class="rounded-md border border-slate-300 px-3 py-2 font-normal outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100" type="email" @bind="Email" required />
         </label>
         <button class="justify-self-start rounded-md bg-emerald-800 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-900 disabled:opacity-50 sm:col-span-2" type="submit" disabled="@IsBusy">
-            Create example
+            Opret hus
         </button>
     </form>
 
@@ -44,7 +44,7 @@
 
         try
         {
-            using var response = await Http.PostAsJsonAsync("api/examples", new CreateHusRequest(Name, 2.4, 1 ));
+            using var response = await Http.PostAsJsonAsync("api/hus", new CreateHusRequest(Name, 2.4, 1 ));
             if (!response.IsSuccessStatusCode)
             {
                 ErrorMessage = response.StatusCode == System.Net.HttpStatusCode.BadRequest
