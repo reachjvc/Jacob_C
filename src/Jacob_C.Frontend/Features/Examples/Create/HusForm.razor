@@ -2,16 +2,20 @@
 @inject HttpClient Http
 
 <section class="rounded-xl border border-slate-200 bg-white p-5 shadow-sm sm:p-6" aria-labelledby="create-heading">
-    <h2 id="create-heading" class="text-lg font-semibold">Create</h2>
+    <h2 id="create-heading" class="text-lg font-semibold">Opret</h2>
 
     <form class="mt-4 grid gap-4 sm:grid-cols-2" @onsubmit="CreateAsync" @onsubmit:preventDefault>
         <label class="grid gap-1.5 text-sm font-medium">
-            Name
+            Navn
             <input class="rounded-md border border-slate-300 px-3 py-2 font-normal outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100" @bind="Name" required />
         </label>
         <label class="grid gap-1.5 text-sm font-medium">
-            Email
-            <input class="rounded-md border border-slate-300 px-3 py-2 font-normal outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100" type="email" @bind="Email" required />
+            Kvm
+            <input class="rounded-md border border-slate-300 px-3 py-2 font-normal outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100" type="number" @bind="Kvm" step ="any" required />
+        </label>
+        <label class="grid gap-1.5 text-sm font-medium">
+            Damer
+            <input class="rounded-md border border-slate-300 px-3 py-2 font-normal outline-none focus:border-emerald-700 focus:ring-2 focus:ring-emerald-100" type="number" @bind="Damer" />
         </label>
         <button class="justify-self-start rounded-md bg-emerald-800 px-4 py-2 text-sm font-semibold text-white hover:bg-emerald-900 disabled:opacity-50 sm:col-span-2" type="submit" disabled="@IsBusy">
             Opret hus
@@ -28,7 +32,8 @@
     [Parameter] public EventCallback OnCreated { get; set; }
 
     private string Name { get; set; } = string.Empty;
-    private string Email { get; set; } = string.Empty;
+    private double Kvm { get; set; } = 0; 
+    private int? Damer { get; set; }
     private string? ErrorMessage { get; set; }
     private bool IsBusy { get; set; }
 
@@ -44,22 +49,23 @@
 
         try
         {
-            using var response = await Http.PostAsJsonAsync("api/hus", new CreateHusRequest(Name, 2.4, 1 ));
+            using var response = await Http.PostAsJsonAsync("api/hus", new CreateHusRequest(Name, Kvm, Damer));
             if (!response.IsSuccessStatusCode)
             {
                 ErrorMessage = response.StatusCode == System.Net.HttpStatusCode.BadRequest
-                    ? "Enter a name and a valid email address."
+                    ? "Skriv et gyldigt navn og kvm for at oprette et hus"
                     : $"The API returned status code {(int)response.StatusCode}.";
                 return;
             }
 
             Name = string.Empty;
-            Email = string.Empty;
+            Kvm = 0;
+            Damer = null;
             await OnCreated.InvokeAsync();
         }
         catch (HttpRequestException)
         {
-            ErrorMessage = "Could not create the example.";
+            ErrorMessage = "Kunne ikke oprette et hus :( [nok fordi jacob er en bølle]";
         }
         finally
         {

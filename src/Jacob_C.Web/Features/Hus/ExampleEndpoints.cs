@@ -6,9 +6,9 @@ public static class ExampleEndpoints
 {
     public static IEndpointRouteBuilder MapExampleEndpoints(this IEndpointRouteBuilder endpoints)
     {
-        var examples = endpoints.MapGroup("/api/hus").WithTags("Hus");
+        var hus = endpoints.MapGroup("/api/hus").WithTags("Hus");
 
-        examples.MapCreateHus();
+        hus.MapCreateHus();
 
         return endpoints;
     }
