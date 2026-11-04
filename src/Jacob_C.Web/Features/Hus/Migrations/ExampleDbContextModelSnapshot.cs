@@ -40,7 +40,7 @@ namespace Jacob_C.Web.Features.Hus.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Examples");
+                    b.ToTable("Huse");
                 });
 #pragma warning restore 612, 618
         }
