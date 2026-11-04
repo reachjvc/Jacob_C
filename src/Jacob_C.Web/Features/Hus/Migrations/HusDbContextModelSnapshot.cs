@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Jacob_C.Web.Features.Hus.Migrations
 {
     [DbContext(typeof(HusDbContext))]
-    partial class ExampleDbContextModelSnapshot : ModelSnapshot
+    partial class HusDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)
         {
