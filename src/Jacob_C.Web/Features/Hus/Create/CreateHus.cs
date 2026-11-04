@@ -12,7 +12,7 @@ public static class CreateHus
 
     internal static async Task<IResult> Handle(
         CreateHusRequest request,
-        ExampleDbContext dbContext,
+        HusDbContext dbContext,
         CancellationToken cancellationToken)
     {
         var errors = ValidateRequest(request);
@@ -29,7 +29,7 @@ public static class CreateHus
             Damer = request.Damer
         };
 
-        dbContext.Examples.Add(hus);
+        dbContext.Huse.Add(hus);
         await dbContext.SaveChangesAsync(cancellationToken);
 
         var response = new CreateHusResponse(hus.Id, hus.Name, hus.Kvm, hus.Damer);

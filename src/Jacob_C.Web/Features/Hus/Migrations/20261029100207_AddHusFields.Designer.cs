@@ -11,7 +11,7 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 namespace Jacob_C.Web.Features.Hus.Migrations
 {
-    [DbContext(typeof(ExampleDbContext))]
+    [DbContext(typeof(HusDbContext))]
     [Migration("20261029100207_AddHusFields")]
     partial class AddHusFields
     {

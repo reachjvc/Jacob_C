@@ -10,7 +10,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveWebAssemblyComponents();
-builder.Services.AddDbContext<ExampleDbContext>(options =>
+builder.Services.AddDbContext<HusDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 var app = builder.Build();
@@ -18,7 +18,7 @@ var app = builder.Build();
 // TEMP: sanity check CreateHus by creating 10 houses on startup
 using (var scope = app.Services.CreateScope())
 {
-    var dbContext = scope.ServiceProvider.GetRequiredService<ExampleDbContext>();
+    var dbContext = scope.ServiceProvider.GetRequiredService<HusDbContext>();
     for (var i = 1; i <= 10; i++)
     {
         var request = new CreateHusRequest($"Hus {i}", 50 + i * 10, i % 3 == 0 ? null : i);

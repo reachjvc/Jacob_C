@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace Jacob_C.Web.Features.Examples.Migrations
+namespace Jacob_C.Web.Features.Hus.Migrations
 {
     /// <inheritdoc />
     public partial class CreateExamples : Migration

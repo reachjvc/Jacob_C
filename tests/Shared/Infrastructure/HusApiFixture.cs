@@ -1,4 +1,4 @@
-using Jacob_C.Web.Features.Examples;
+using Jacob_C.Web.Features.Hus;
 using Jacob_C.Web.Features.Hus;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc.Testing;
@@ -8,11 +8,11 @@ using Testcontainers.PostgreSql;
 
 namespace Jacob_C.Testing.Infrastructure;
 
-public sealed class ExampleApiFixture : IAsyncLifetime
+public sealed class HusApiFixture : IAsyncLifetime
 {
     private readonly PostgreSqlContainer _postgres = new PostgreSqlBuilder("postgres:17-alpine").Build();
 
-    private ExampleApiFactory _factory = null!;
+    private HusApiFactory _factory = null!;
     private Respawner _respawner = null!;
 
     public HttpClient Client { get; private set; } = null!;
@@ -21,14 +21,14 @@ public sealed class ExampleApiFixture : IAsyncLifetime
     {
         await _postgres.StartAsync();
 
-        _factory = new ExampleApiFactory(_postgres.GetConnectionString());
+        _factory = new HusApiFactory(_postgres.GetConnectionString());
         Client = _factory.CreateClient(new WebApplicationFactoryClientOptions
         {
             BaseAddress = new Uri("https://localhost")
         });
 
         using var scope = _factory.Services.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<ExampleDbContext>();
+        var dbContext = scope.ServiceProvider.GetRequiredService<HusDbContext>();
 
         await dbContext.Database.MigrateAsync();
         await dbContext.Database.OpenConnectionAsync();
@@ -43,7 +43,7 @@ public sealed class ExampleApiFixture : IAsyncLifetime
     public async Task ResetDatabaseAsync()
     {
         using var scope = _factory.Services.CreateScope();
-        var dbContext = scope.ServiceProvider.GetRequiredService<ExampleDbContext>();
+        var dbContext = scope.ServiceProvider.GetRequiredService<HusDbContext>();
 
         await dbContext.Database.OpenConnectionAsync();
         await _respawner.ResetAsync(dbContext.Database.GetDbConnection());

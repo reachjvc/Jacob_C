@@ -22,8 +22,4 @@
     <ProjectReference Include="..\Shared\Jacob_C.Testing.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Examples\Create\" />
-  </ItemGroup>
-
 </Project>

@@ -8,9 +8,9 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
 #nullable disable
 
-namespace Jacob_C.Web.Features.Examples.Migrations
+namespace Jacob_C.Web.Features.Hus.Migrations
 {
-    [DbContext(typeof(ExampleDbContext))]
+    [DbContext(typeof(HusDbContext))]
     partial class ExampleDbContextModelSnapshot : ModelSnapshot
     {
         protected override void BuildModel(ModelBuilder modelBuilder)

@@ -5,11 +5,11 @@ using Microsoft.Extensions.Configuration;
 
 namespace Jacob_C.Testing.Infrastructure;
 
-internal sealed class ExampleApiFactory : WebApplicationFactory<Program>
+internal sealed class HusApiFactory : WebApplicationFactory<Program>
 {
     private readonly string _connectionString;
 
-    public ExampleApiFactory(string connectionString)
+    public HusApiFactory(string connectionString)
     {
         _connectionString = connectionString;
     }
