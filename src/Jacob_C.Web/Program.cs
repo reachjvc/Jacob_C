@@ -15,18 +15,81 @@ builder.Services.AddDbContext<HusDbContext>(options =>
 
 var app = builder.Build();
 
-// TEMP: sanity check CreateHus by creating 10 houses on startup
+// ============================== SHOWCASE ==============================
+// A place to try our logic directly, without the browser or the API.
+// It runs every time the app starts, and prints to the terminal.
+// It must stay ABOVE app.Run(), because nothing below app.Run() ever runs.
+// Sanity check "er jacob en Tate fanatiker?" = ja
 using (var scope = app.Services.CreateScope())
 {
+    // Get the database helper, so we can hand it to our logic.
     var dbContext = scope.ServiceProvider.GetRequiredService<HusDbContext>();
-    for (var i = 1; i <= 10; i++)
+
+    Console.WriteLine();
+    Console.WriteLine("============================ SHOWCASE: CREATE ============================");
+    Console.WriteLine($"Houses in the database before: {await dbContext.Huse.CountAsync()}");
+
+    // --- 1. A valid house: we expect it to be created ---
+    var request = new CreateHusRequest("Showcase-hus", 123.5, 2);
+
+    Console.WriteLine();
+    Console.WriteLine("1) Sending a VALID house to CreateHus.Handle:");
+    Console.WriteLine($"     Name  = {request.Name}");
+    Console.WriteLine($"     Kvm   = {request.Kvm}");
+    Console.WriteLine($"     Damer = {request.Damer?.ToString() ?? "null (empty)"}");
+
+    var result = await CreateHus.Handle(request, dbContext, CancellationToken.None);
+
+    if (result is Created<CreateHusResponse> created)
     {
-        var request = new CreateHusRequest($"Hus {i}", 50 + i * 10, i % 3 == 0 ? null : i);
-        var result = await CreateHus.Handle(request, dbContext, CancellationToken.None);
-        Console.WriteLine(result is Created<CreateHusResponse> created
-            ? $"Created: {created.Value}"
-            : $"Failed: {result}");
+        var hus = created.Value!;
+        Console.WriteLine("   Answer: Created (success)");
+        Console.WriteLine($"     Id       = {hus.Id}");
+        Console.WriteLine($"     Name     = {hus.Name}");
+        Console.WriteLine($"     Kvm      = {hus.Kvm}");
+        Console.WriteLine($"     Damer    = {hus.Damer?.ToString() ?? "null (empty)"}");
+        Console.WriteLine($"     Location = {created.Location}");
     }
+    else
+    {
+        Console.WriteLine($"   Answer: NOT created. Got: {result}");
+    }
+
+    // --- 2. An invalid house (no name): we expect it to be rejected ---
+    var badRequest = new CreateHusRequest("", 50, null);
+
+    Console.WriteLine();
+    Console.WriteLine("2) Sending an INVALID house (empty name) to CreateHus.Handle:");
+    Console.WriteLine($"     Name  = \"{badRequest.Name}\"");
+
+    var badResult = await CreateHus.Handle(badRequest, dbContext, CancellationToken.None);
+
+    if (badResult is ValidationProblem problem)
+    {
+        Console.WriteLine("   Answer: Rejected (validation problem)");
+        foreach (var (field, messages) in problem.ProblemDetails.Errors)
+        {
+            Console.WriteLine($"     {field}: {string.Join(", ", messages)}");
+        }
+    }
+    else
+    {
+        Console.WriteLine($"   Answer: NOT rejected?! Got: {badResult}");
+    }
+
+    Console.WriteLine();
+    Console.WriteLine($"Houses in the database after: {await dbContext.Huse.CountAsync()}");
+    Console.WriteLine("==========================================================================");
+    Console.WriteLine();
+
+    // ------------------------- READ (next task) -------------------------
+    // var readResult = await ReadHus.Handle(created.Value!.Id, dbContext, CancellationToken.None);
+    // Print what came back, and check it matches what we created above.
+
+    // ------------------------ UPDATE (later task) -----------------------
+    // var updateRequest = new UpdateHusRequest("Showcase-hus (updated)", 200, 3);
+    // var updateResult = await UpdateHus.Handle(created.Value!.Id, updateRequest, dbContext, CancellationToken.None);
+    // Print the result, then read the house again to prove it changed.
 }
 
 // Configure the HTTP request pipeline.
